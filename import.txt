@@ -1,0 +1,43 @@
+/*test*/
+
+/*导入 bank_detail_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/bank_detail_test.txt" into table bank_detail_test Fields  terminated by ','  lines terminated by '\r\n' ;   
+/*(uid,timestamp,type,amount,flag)*/
+/*导入 user_info_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/user_info_test.txt" into table user_info_test Fields terminated by ','  lines terminated by '\r\n' ;  
+
+/*(uid,sex,job,education,marry,residence) */
+
+/*导入 browse_history_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/browse_history_test.txt" into table browse_history_test Fields  terminated by ','  lines terminated by '\r\n' ;  
+ 
+/*导入 loan_time_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/loan_time_test.txt" into table loan_time_test Fields  terminated by ','  lines terminated by '\r\n' ;    
+
+/*导入 usersID_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/usersID_test.txt" into table usersID_test Fields  terminated by ',' lines terminated by '\r\n' ;  
+
+/*导入 bill_detail_test.txt 数据*/
+load data local infile "d:/dc_ploan/test/bill_detail_test.txt" into table bill_detail_test Fields  terminated by ',' lines terminated by '\r\n' ;  
+
+/*train*/
+
+/*导入 bank_detail_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/bank_detail_train.txt" into table bank_detail_train Fields terminated by ','  lines terminated by '\r\n' ;  
+/*(uid,timestamp,type,amount,flag);  */
+
+/*导入 user_info_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/user_info_train.txt" into table user_info_train Fields terminated by ','  lines terminated by '\r\n' ;  
+/*(uid,sex,job,education,marry,residence);*/ 
+
+/*导入 browse_history_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/browse_history_train.txt" into table browse_history_train Fields  terminated by ','  lines terminated by '\r\n' ;   
+
+/*导入 loan_time_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/loan_time_train.txt" into table loan_time_train Fields  terminated by ','  lines terminated by '\r\n' ;   
+
+/*导入 overdue_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/overdue_train.txt" into table overdue_train Fields  terminated by ','  lines terminated by '\r\n' ;  
+ 
+/*导入 bill_detail_train.txt 数据*/
+load data local infile "d:/dc_ploan/train/bill_detail_train.txt" into table bill_detail_train Fields  terminated by ',' lines terminated by '\r\n' ;  

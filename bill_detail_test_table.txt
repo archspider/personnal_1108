@@ -1,0 +1,20 @@
+CREATE TABLE `bill_detail_test` (
+  `uid` varchar(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` varchar(15) DEFAULT NULL COMMENT '账单时间戳',
+  `bid` varchar(10) DEFAULT NULL COMMENT '银行id',
+  `p_bill` decimal(12,6) DEFAULT NULL COMMENT '上期账单金额',
+  `p_repayment` decimal(12,6) DEFAULT NULL COMMENT '上期还款金额',
+  `credit_limit` decimal(12,6) DEFAULT NULL COMMENT '信用卡额度',
+  `c_bill_balance` decimal(12,6) DEFAULT NULL COMMENT '本期账单余额',
+  `c_min_repayment` decimal(12,6) DEFAULT NULL COMMENT '本期账单最低还款额',
+  `transaction` int DEFAULT NULL COMMENT '消费笔数',
+  `c_bill` decimal(12,6) DEFAULT NULL COMMENT '本期账单金额',
+  `adjustment` decimal(12,6) DEFAULT NULL COMMENT '调整金额',
+  `interest` decimal(12,6) DEFAULT NULL COMMENT '循环利息',
+  `available` decimal(12,6) DEFAULT NULL COMMENT '可用金额',
+  `encashed` decimal(12,6) DEFAULT NULL COMMENT '预借现金额度',
+  `status` char(1) DEFAULT NULL COMMENT '还款状态'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+用户id,账单时间戳,银行id,上期账单金额,上期还款金额,信用卡额度,本期账单余额,
+本期账单最低还款额,消费笔数,本期账单金额,调整金额,循环利息,可用金额,预借现金额度,还款状态

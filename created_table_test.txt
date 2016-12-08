@@ -1,0 +1,59 @@
+/*test*/
+
+CREATE TABLE `bank_detail_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` int(15) DEFAULT NULL COMMENT '时间戳',
+  `type` char(1) DEFAULT NULL COMMENT '交易类型',
+  `amount` decimal(12,6) DEFAULT NULL COMMENT '交易金额',
+  `flag` char(1) DEFAULT NULL COMMENT '工资收入标记'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='银行流水记录_test';
+
+
+CREATE TABLE `browse_history_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` int(15) DEFAULT NULL COMMENT '时间戳',
+  `brodata` varchar(5) DEFAULT NULL COMMENT '浏览行为数据',
+  `brono` varchar(2) DEFAULT NULL COMMENT '浏览子行为编号'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户浏览行为_test';
+
+
+CREATE TABLE `loan_time_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` int(15) DEFAULT NULL COMMENT '放款时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='放款时间信息_test';
+
+
+CREATE TABLE `user_info_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `sex` char(1) DEFAULT NULL COMMENT '性别',
+  `job` char(1) DEFAULT NULL COMMENT '职业',
+  `education` char(1) DEFAULT NULL COMMENT '教育程度',
+  `marry` char(1) DEFAULT NULL COMMENT '婚姻状态',
+  `residence` char(1) DEFAULT NULL COMMENT '户口类型'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户的基本属性_test';
+
+
+CREATE TABLE `usersid_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` int(15) DEFAULT NULL COMMENT '计算时间',
+  `tag` char(1) DEFAULT NULL COMMENT '样本标签',
+  `p` decimal(5,2) DEFAULT NULL COMMENT '概率'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='顾客是否发生逾期行为的记录用于测试的用户，只提供id列表_test';
+
+CREATE TABLE `bill_detail_test` (
+  `uid` int(10) DEFAULT NULL COMMENT '用户id',
+  `timestamp` int(15) DEFAULT NULL COMMENT '账单时间戳',
+  `bid` int(10) DEFAULT NULL COMMENT '银行id',
+  `p_bill` decimal(12,6) DEFAULT NULL COMMENT '上期账单金额',
+  `p_repayment` decimal(12,6) DEFAULT NULL COMMENT '上期还款金额',
+  `credit_limit` decimal(12,6) DEFAULT NULL COMMENT '信用卡额度',
+  `c_bill_balance` decimal(12,6) DEFAULT NULL COMMENT '本期账单余额',
+  `c_min_repayment` decimal(12,6) DEFAULT NULL COMMENT '本期账单最低还款额',
+  `transaction` int(4) DEFAULT NULL COMMENT '消费笔数',
+  `c_bill` decimal(12,6) DEFAULT NULL COMMENT '本期账单金额',
+  `adjustment` decimal(12,6) DEFAULT NULL COMMENT '调整金额',
+  `interest` decimal(12,6) DEFAULT NULL COMMENT '循环利息',
+  `available` decimal(12,6) DEFAULT NULL COMMENT '可用金额',
+  `encashed` decimal(12,6) DEFAULT NULL COMMENT '预借现金额度',
+  `status` char(1) DEFAULT NULL COMMENT '还款状态'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='信用卡账单记录_test';
